@@ -30,8 +30,9 @@ import javax.imageio.ImageIO
 class DOCXThumbnailerTest extends Specification {
     def "test .docx thumbnailing"(){
         setup:
-        File inputFile = new File("src/test/resources/test-input.docx")
-        File thumbnail = new File("src/test/resources/test-output.jpg")
+        ClassLoader classLoader = getClass().getClassLoader();
+        InputStream inputFile = classLoader.getResource("docx/test-input.docx").openStream()
+        byte[] thumbnail = classLoader.getResource("docx/test-output.jpg").bytes
         Thumbnailer thumbnailer = new DOCXThumbnailer()
 
         when:
@@ -44,6 +45,6 @@ class DOCXThumbnailerTest extends Specification {
 
         then:
         output.size() == 1
-//        thumbnail.getBytes() == actual_bytes
+//        thumbnail == actual_bytes
     }
 }

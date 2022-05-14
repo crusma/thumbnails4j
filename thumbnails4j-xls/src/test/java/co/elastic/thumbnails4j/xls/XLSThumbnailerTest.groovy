@@ -30,8 +30,9 @@ import javax.imageio.ImageIO
 class XLSThumbnailerTest extends Specification {
     def "test .xls thumbnailing"(){
         setup:
-        File inputFile = new File("src/test/resources/test-input.xls")
-        File thumbnail = new File("src/test/resources/test-output.jpg")
+        ClassLoader classLoader = getClass().getClassLoader();
+        InputStream inputFile = classLoader.getResource("xls/test-input.xls").openStream()
+        byte[] thumbnail = classLoader.getResource("xls/test-output.jpg").bytes
         Thumbnailer thumbnailer = new XLSThumbnailer()
 
         when:
@@ -44,6 +45,6 @@ class XLSThumbnailerTest extends Specification {
 
         then:
         output.size() == 1
-//        thumbnail.getBytes() == actual_bytes
+        //thumbnail == actual_bytes
     }
 }

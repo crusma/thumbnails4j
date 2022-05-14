@@ -30,8 +30,9 @@ class ImageThumbnailerTest extends Specification {
 
     def "test image thumbnailing"() {
         setup:
-        File inputFile = new File("src/test/resources/test-input.png")
-        File thumbnail = new File("src/test/resources/test-output.png")
+        ClassLoader classLoader = getClass().getClassLoader();
+        InputStream inputFile = classLoader.getResource("image/test-input.png").openStream()
+        byte[] thumbnail = classLoader.getResource("image/test-output.png").bytes
         def thumbnailer = new ImageThumbnailer('png')
         def dimensions = [new Dimensions(100,100)]
 
@@ -40,7 +41,7 @@ class ImageThumbnailerTest extends Specification {
         ByteArrayOutputStream baos = new ByteArrayOutputStream()
         ImageIO.write(output[0], "png", baos)
         byte[] actualBytes = baos.toByteArray()
-        byte[] expectedBytes = thumbnail.getBytes()
+        byte[] expectedBytes = thumbnail
 
         then:
         output.size() == 1

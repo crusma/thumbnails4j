@@ -21,6 +21,12 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
+            <groupId>co.elastic.thumbnails4j</groupId>
+            <artifactId>thumbnails4j-test</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
         </dependency>
