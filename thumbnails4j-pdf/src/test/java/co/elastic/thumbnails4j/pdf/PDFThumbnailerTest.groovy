@@ -30,8 +30,9 @@ import javax.imageio.ImageIO
 class PDFThumbnailerTest extends Specification {
     def "test .pdf thumbnailing"(){
         setup:
-        File inputFile = new File("src/test/resources/test-input.pdf")
-        File thumbnail = new File("src/test/resources/test-output.jpg")
+        ClassLoader classLoader = getClass().getClassLoader();
+        InputStream inputFile = classLoader.getResource("pdf/test-input.pdf").openStream()
+        byte[] thumbnail = classLoader.getResource("pdf/test-output.jpg").bytes
         Thumbnailer thumbnailer = new PDFThumbnailer()
 
         when:
@@ -44,6 +45,6 @@ class PDFThumbnailerTest extends Specification {
 
         then:
         output.size() == 1
-//        thumbnail.getBytes() == actual_bytes
+//        thumbnail == actual_bytes
     }
 }

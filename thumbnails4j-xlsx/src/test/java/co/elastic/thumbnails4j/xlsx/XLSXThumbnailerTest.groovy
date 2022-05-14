@@ -31,8 +31,9 @@ class XLSXThumbnailerTest extends Specification {
 
     def "test .xlsx thumbnailing"(){
         setup:
-        File inputFile = new File("src/test/resources/test-input.xlsx")
-        File thumbnail = new File("src/test/resources/test-output.jpg")
+        ClassLoader classLoader = getClass().getClassLoader();
+        InputStream inputFile = classLoader.getResource("xlsx/test-input.xlsx").openStream()
+        byte[] thumbnail = classLoader.getResource("xlsx/test-output.jpg").bytes
         Thumbnailer thumbnailer = new XLSXThumbnailer()
 
         when:
@@ -45,6 +46,6 @@ class XLSXThumbnailerTest extends Specification {
 
         then:
         output.size() == 1
-//        thumbnail.getBytes() == actual_bytes
+//        thumbnail == actual_bytes
     }
 }

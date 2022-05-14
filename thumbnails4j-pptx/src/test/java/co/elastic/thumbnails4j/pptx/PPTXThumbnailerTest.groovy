@@ -31,8 +31,9 @@ class PPTXThumbnailerTest extends Specification {
 
     def "test .pptx thumbnailing"(){
         setup:
-        File inputFile = new File("src/test/resources/test-input.pptx")
-        File thumbnail = new File("src/test/resources/test-output.jpg")
+        ClassLoader classLoader = getClass().getClassLoader();
+        InputStream inputFile = classLoader.getResource("pptx/test-input.pptx").openStream()
+        byte[] thumbnail = classLoader.getResource("pptx/test-output.jpg").bytes
         Thumbnailer thumbnailer = new PPTXThumbnailer()
 
         when:
@@ -45,6 +46,6 @@ class PPTXThumbnailerTest extends Specification {
 
         then:
         output.size() == 1
-//        thumbnail.getBytes() == actual_bytes
+//        thumbnail == actual_bytes
     }
 }

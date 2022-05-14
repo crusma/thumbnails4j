@@ -63,6 +63,7 @@
         <module>thumbnails4j-pptx</module>
         <module>thumbnails4j-xls</module>
         <module>thumbnails4j-xlsx</module>
+        <module>thumbnails4j-test</module>
     </modules>
 
     <properties>

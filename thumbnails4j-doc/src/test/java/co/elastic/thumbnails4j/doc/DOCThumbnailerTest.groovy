@@ -31,8 +31,9 @@ class DOCThumbnailerTest extends Specification {
 
     def "test .doc thumbnailing"(){
         setup:
-        File inputFile = new File("src/test/resources/test-input.doc")
-        File thumbnail = new File("src/test/resources/test-output.jpg")
+        ClassLoader classLoader = getClass().getClassLoader();
+        InputStream inputFile = classLoader.getResource("doc/test-input.doc").openStream()
+        byte[] thumbnail = classLoader.getResource("doc/test-output.jpg").bytes
         Thumbnailer thumbnailer = new DOCThumbnailer()
 
         when:
@@ -45,6 +46,6 @@ class DOCThumbnailerTest extends Specification {
 
         then:
         output.size() == 1
-//        thumbnail.getBytes() == actual_bytes
+//        thumbnail == actual_bytes
     }
 }
