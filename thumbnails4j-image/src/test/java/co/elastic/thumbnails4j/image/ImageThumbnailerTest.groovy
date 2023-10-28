@@ -31,8 +31,8 @@ class ImageThumbnailerTest extends Specification {
     def "test image thumbnailing"() {
         setup:
         ClassLoader classLoader = getClass().getClassLoader();
-        InputStream inputFile = classLoader.getResource("image/test-input.png").openStream()
-        byte[] thumbnail = classLoader.getResource("image/test-output.png").bytes
+        InputStream inputFile = classLoader.getResource("png/test-input.png").openStream()
+        byte[] thumbnail = classLoader.getResource("png/test-output.png").bytes
         def thumbnailer = new ImageThumbnailer('png')
         def dimensions = [new Dimensions(100,100)]
 
