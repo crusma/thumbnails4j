@@ -25,6 +25,7 @@ import co.elastic.thumbnails4j.core.Dimensions;
 import co.elastic.thumbnails4j.core.ThumbnailUtils;
 import co.elastic.thumbnails4j.core.Thumbnailer;
 import co.elastic.thumbnails4j.core.ThumbnailingException;
+import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.cos.COSBase;
 import org.apache.pdfbox.cos.COSDictionary;
 import org.apache.pdfbox.cos.COSName;
@@ -58,7 +59,7 @@ public class PDFThumbnailer implements Thumbnailer {
 
     @Override
     public List<BufferedImage> getThumbnails(File input, List<Dimensions> dimensions) throws ThumbnailingException {
-        try (PDDocument document = PDDocument.load(input)) {
+        try (PDDocument document = Loader.loadPDF(input)) {
             return getThumbnails(document, dimensions);
         } catch (IOException e) {
             logger.error("Could not load input as PDF: ", e);
@@ -68,7 +69,7 @@ public class PDFThumbnailer implements Thumbnailer {
 
     @Override
     public List<BufferedImage> getThumbnails(InputStream input, List<Dimensions> dimensions) throws ThumbnailingException {
-        try (PDDocument document = PDDocument.load(input)) {
+        try (PDDocument document = Loader.loadPDF(input.readAllBytes())) {
             return getThumbnails(document, dimensions);
         } catch (IOException e) {
             logger.error("Could not load input as PDF: ", e);
