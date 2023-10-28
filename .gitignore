@@ -28,3 +28,31 @@ hs_err_pid*
 
 # maven
 target
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers-doc.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers-docx.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers-pdf.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers-png.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers-pptx.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers-xls.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers-xlsx.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers2-doc.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers2-docx.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers2-pdf.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers2-png.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers2-pptx.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers2-xlsx.png
+/thumbnails4j-all/shouldGenerateThumbnailsUsingAllThumbnailers2-xls.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers-doc.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers-docx.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers-pdf.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers-png.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers-pptx.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers-xls.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers-xlsx.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers2-doc.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers2-docx.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers2-pdf.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers2-png.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers2-pptx.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers2-xls.png
+/thumbnails4j-demo/shouldGenerateThumbnailsUsingAllThumbnailers2-xlsx.png
