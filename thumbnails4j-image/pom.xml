@@ -20,12 +20,11 @@
             <artifactId>thumbnails4j-core</artifactId>
             <version>${project.version}</version>
         </dependency>
-
-
         <!-- test dependencies -->
         <dependency>
             <groupId>org.spockframework</groupId>
             <artifactId>spock-core</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>co.elastic.thumbnails4j</groupId>

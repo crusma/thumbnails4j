@@ -101,7 +101,7 @@ public class DOCXThumbnailer implements Thumbnailer {
         if (pageSz == null){
             return dimensions;
         } else {
-            return new Dimensions(pageSz.getW().intValue(), pageSz.getH().intValue());
+			return new Dimensions(Integer.parseInt(pageSz.getW().toString()), Integer.parseInt(pageSz.getH().toString()));
         }
 
     }

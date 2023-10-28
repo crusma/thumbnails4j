@@ -22,7 +22,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
+            <artifactId>poi-ooxml-full</artifactId>
         </dependency>
         <dependency>
             <groupId>fr.opensagres.xdocreport</groupId>
@@ -33,6 +33,7 @@
         <dependency>
             <groupId>org.spockframework</groupId>
             <artifactId>spock-core</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>co.elastic.thumbnails4j</groupId>

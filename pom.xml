@@ -67,15 +67,15 @@
     </modules>
 
     <properties>
-        <slf4j.version>1.7.25</slf4j.version>
-        <poi.version>4.1.2</poi.version>
-        <xdocreport.version>2.0.2</xdocreport.version>
-        <pdfbox.version>2.0.24</pdfbox.version>
+        <slf4j.version>2.0.9</slf4j.version>
+        <poi.version>5.2.4</poi.version>
+        <xdocreport.version>2.0.4</xdocreport.version>
+        <pdfbox.version>3.0.0</pdfbox.version>
         <jakarta.version>2.3.2</jakarta.version>
         <jaxb.version>2.3.2</jaxb.version>
 
-        <groovy.version>3.0.8</groovy.version>
-        <spock.version>2.0-groovy-3.0</spock.version>
+        <groovy.version>4.0.15</groovy.version>
+        <spock.version>2.3-groovy-4.0</spock.version>
         <cglib.version>3.3.0</cglib.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -95,7 +95,7 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
-                <artifactId>poi-ooxml</artifactId>
+                <artifactId>poi-ooxml-full</artifactId>
                 <version>${poi.version}</version>
                 <exclusions>
                     <exclusion>
@@ -104,11 +104,20 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+			            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+			</dependency>	
             <dependency>
                 <groupId>fr.opensagres.xdocreport</groupId>
                 <artifactId>fr.opensagres.xdocreport.converter.docx.xwpf</artifactId>
                 <version>${xdocreport.version}</version>
                 <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.poi</groupId>
+                        <artifactId>poi-ooxml-full</artifactId>
+                    </exclusion>
                     <exclusion>
                         <groupId>com.lowagie</groupId>
                         <artifactId>itext</artifactId>
@@ -130,8 +139,6 @@
                 <artifactId>jaxb-runtime</artifactId>
                 <version>${jaxb.version}</version>
             </dependency>
-
-            <!-- test dependencies -->
             <dependency>
                 <groupId>org.codehaus.groovy</groupId>
                 <artifactId>groovy-all</artifactId>
