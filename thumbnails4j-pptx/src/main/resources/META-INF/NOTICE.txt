@@ -17,11 +17,10 @@ Third party libraries used by thumbnails4j-pptx:
   Apache POI - Common under Apache License, Version 2.0
   Apache POI - OOXML schemas (full) under Apache License, Version 2.0
   curvesapi under BSD License
-  Extended StAX API under Eclipse Distribution License - v 1.0
-  fastinfoset under Apache License, Version 2.0 or Eclipse Distribution License - v 1.0
   istack common utility code runtime under Eclipse Distribution License - v 1.0
-  jakarta.xml.bind-api under Eclipse Distribution License - v 1.0
-  JavaBeans Activation Framework API jar under EDL 1.0
+  Jakarta Activation API under EDL 1.0
+  Jakarta XML Binding API under Eclipse Distribution License - v 1.0
+  JAXB Core under Eclipse Distribution License - v 1.0
   JAXB Runtime under Eclipse Distribution License - v 1.0
   SLF4J API Module under MIT License
   SparseBitSet under The Apache Software License, Version 2.0

@@ -37,7 +37,7 @@ class XLSXThumbnailerTest extends Specification {
         Thumbnailer thumbnailer = new XLSXThumbnailer()
 
         when:
-        def output = thumbnailer.getThumbnails(inputFile, [new Dimensions(100, 100)])
+        def output = thumbnailer.getThumbnails(inputFile, [new Dimensions(500, 500)])
         def baos = new ByteArrayOutputStream()
         ImageIO.write(output[0], "jpg", baos)
         baos.flush()
@@ -46,6 +46,6 @@ class XLSXThumbnailerTest extends Specification {
 
         then:
         output.size() == 1
-//        thumbnail == actual_bytes
+        thumbnail == actual_bytes
     }
 }
